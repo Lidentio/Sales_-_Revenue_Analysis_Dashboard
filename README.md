@@ -132,5 +132,7 @@ const C = {
 
 ## License
 
-MIT — do whatever you want with it.
+© 2026 Abhinav Prasad. All rights reserved.
+
+This project and its source code may not be copied, modified, or redistributed without explicit permission from the author.
 
