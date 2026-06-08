@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SalesIQ — Revenue Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.8.1/prop-types.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://unpkg.com/recharts@2.10.3/umd/Recharts.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body { background: #08080d; }
+    #root { min-height: 100vh; }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-track { background: #0d0d14; }
+    ::-webkit-scrollbar-thumb { background: #1e1e2e; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useMemo, useRef, useCallback } = React;
+    const {
+      AreaChart, Area, BarChart, Bar, PieChart, Pie, Cell,
+      XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
+    } = Recharts;
+
+    // ═══════════════ THEME ══════════════════════════════════
+    const C = {
+      bg:      "#08080d", surface: "#0d0d14", card: "#12121a",
+      border:  "#1e1e2e", borderHi: "#2a2a3e",
+      accent:  "#f0a922", accentA: "rgba(240,169,34,0.12)",
+      blue:    "#5c8eed", purple: "#9e79f5",
+      green:   "#3ecf8e", red: "#f06767",
+      text:    "#eaeaf5", sub: "#7878a0", dim: "#3a3a55",
+      chart:   ["#f0a922","#5c8eed","#9e79f5","#3ecf8e","#f06767","#22d3ee","#fb923c","#ec4899"],
+    };
+
+    // ═══════════════ FORMATTERS ═════════════════════════════
+    const fmtK    = v => v >= 1e6 ? `$${(v/1e6).toFixed(1)}M` : v >= 1e3 ? `$${(v/1e3).toFixed(0)}K` : `$${v}`;
+    const fmtNum  = v => v >= 1e6 ? `${(v/1e6).toFixed(1)}M`  : v >= 1e3 ? `${(v/1e3).toFixed(0)}K`  : `${v}`;
+    const fmtFull = v => `$${Number(v).toLocaleString()}`;
+    const fmtSign = v => `${v >= 0 ? "▲" : "▼"} ${Math.abs(v).toFixed(1)}%`;
+
+    // ═══════════════ SAMPLE DATA ════════════════════════════
+    const PRODUCTS = [
+      { name: "Laptop Pro X1",    cat: "Electronics", price: 1249 },
+      { name: "Wireless Earbuds", cat: "Electronics", price: 149  },
+      { name: "Smart Watch S3",   cat: "Electronics", price: 329  },
+      { name: "Trail Runners",    cat: "Apparel",     price: 118  },
+      { name: "Yoga Kit",         cat: "Fitness",     price: 64   },
+      { name: "Espresso Maker",   cat: "Kitchen",     price: 89   },
+      { name: "Architect Lamp",   cat: "Accessories", price: 52   },
+      { name: "Urban Backpack",   cat: "Accessories", price: 78   },
+    ];
+    const REGIONS = ["North", "South", "East", "West"];
+    const MONTHS  = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+    function genSample() {
+      let s = 1337;
+      const rng = () => { s = Math.imul(1664525, s) + 1013904223 | 0; return (s >>> 0) / 2 ** 32; };
+      const rows = []; let id = 1;
+      MONTHS.forEach((mon, mi) => {
+        const season = 1 + 0.35 * Math.sin((mi - 2) * Math.PI / 6) + (mi >= 10 ? 0.28 : 0);
+        PRODUCTS.forEach(p => {
+          REGIONS.forEach(reg => {
+            const units   = Math.round((rng() * 40 + 15) * season * (p.cat === "Electronics" ? 1.4 : 1));
+            const revenue = Math.round(units * p.price * (0.92 + rng() * 0.16));
+            rows.push({
+              id: id++, date: `2024-${String(mi+1).padStart(2,"0")}`, month: mon,
+              product: p.name, category: p.cat, region: reg,
+              units, revenue, avgPrice: Math.round(revenue / units)
+            });
+          });
+        });
+      });
+      return rows;
+    }
+    const SAMPLE = genSample();
+
+    // ═══════════════ COLUMN MAPPER ══════════════════════════
+    function mapCols(rows) {
+      if (!rows || !rows.length) return [];
+      const keys = Object.keys(rows[0]);
+      const find = (...opts) => keys.find(k => opts.map(o => o.toLowerCase()).includes(k.toLowerCase().trim())) || null;
+      const dK   = find("date","month","period");
+      const pK   = find("product","item","name","sku","product name");
+      const cK   = find("category","cat","type","segment","department");
+      const rK   = find("region","area","territory","zone","location");
+      const uK   = find("units","quantity","qty","count","volume","sold");
+      const revK = find("revenue","sales","amount","total","value","income");
+      return rows.map((row, i) => {
+        const units   = uK   ? +row[uK]   || 0 : 1;
+        const revenue = revK ? +row[revK] || 0 : 0;
+        return {
+          id: i+1,
+          date:     dK   ? String(row[dK])         : `Row ${i+1}`,
+          month:    dK   ? String(row[dK]).slice(0,7) : "?",
+          product:  pK   ? String(row[pK])         : "Unknown",
+          category: cK   ? String(row[cK])         : "Other",
+          region:   rK   ? String(row[rK])         : "Unknown",
+          units, revenue,
+          avgPrice: units > 0 ? Math.round(revenue / units) : 0
+        };
+      });
+    }
+
+    // ═══════════════ TOOLTIP ════════════════════════════════
+    function Tip({ active, payload, label }) {
+      if (!active || !payload || !payload.length) return null;
+      return (
+        <div style={{ background: C.surface, border: `1px solid ${C.borderHi}`, borderRadius: 8, padding: "10px 14px", fontSize: 12, color: C.text, boxShadow: "0 8px 24px rgba(0,0,0,.6)" }}>
+          {label && <div style={{ color: C.sub, marginBottom: 6, fontWeight: 700 }}>{label}</div>}
+          {payload.map((p, i) => (
+            <div key={i} style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 2 }}>
+              <span style={{ width: 8, height: 8, borderRadius: 2, background: p.color, display: "inline-block", flexShrink: 0 }} />
+              <span style={{ color: C.sub }}>{p.name}:</span>
+              <span style={{ fontFamily: "'DM Mono',monospace", fontWeight: 500 }}>
+                {typeof p.value === "number" && ["revenue","avgPrice"].includes(p.dataKey)
+                  ? fmtFull(p.value)
+                  : typeof p.value === "number" ? p.value.toLocaleString() : p.value}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+
+    // ═══════════════ KPI CARD ═══════════════════════════════
+    function KPICard({ label, value, badge, trend, color }) {
+      return (
+        <div
+          style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: "20px 22px", position: "relative", overflow: "hidden", transition: "border-color .2s", cursor: "default" }}
+          onMouseEnter={e => e.currentTarget.style.borderColor = C.borderHi}
+          onMouseLeave={e => e.currentTarget.style.borderColor = C.border}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: 3, background: `linear-gradient(90deg,${color},transparent)` }} />
+          <div style={{ fontSize: 11, color: C.sub, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em", marginBottom: 10 }}>{label}</div>
+          <div style={{ fontFamily: "'DM Mono',monospace", fontSize: 26, fontWeight: 700, color: C.text, lineHeight: 1, marginBottom: 8, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{value}</div>
+          <div style={{ fontSize: 12, color: C.sub, display: "flex", gap: 8, alignItems: "center" }}>
+            {trend !== undefined && <span style={{ color: trend >= 0 ? C.green : C.red, fontWeight: 700 }}>{fmtSign(trend)}</span>}
+            {badge && <span>{badge}</span>}
+          </div>
+        </div>
+      );
+    }
+
+    // ═══════════════ CHART CARD ═════════════════════════════
+    function ChartCard({ title, sub, children, style: extraStyle }) {
+      return (
+        <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, padding: "20px 22px", ...extraStyle }}>
+          <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 15, color: C.text, marginBottom: 2 }}>{title}</div>
+          <div style={{ fontSize: 12, color: C.sub, marginBottom: 16 }}>{sub}</div>
+          {children}
+        </div>
+      );
+    }
+
+    // ═══════════════ PILL ═══════════════════════════════════
+    function Pill({ label, active, onClick }) {
+      return (
+        <button
+          onClick={onClick}
+          style={{ padding: "3px 12px", borderRadius: 20, fontSize: 12, fontWeight: 600, cursor: "pointer", border: `1px solid ${active ? C.accent : C.border}`, background: active ? C.accentA : "transparent", color: active ? C.accent : C.sub, transition: "all .15s" }}
+        >{label}</button>
+      );
+    }
+
+    // ═══════════════ DASHBOARD ══════════════════════════════
+    function Dashboard() {
+      const [data, setData]     = useState(SAMPLE);
+      const [src, setSrc]       = useState("Sample Data");
+      const [isDrag, setIsDrag] = useState(false);
+      const [catF, setCatF]     = useState([]);
+      const [regF, setRegF]     = useState([]);
+      const [sortK, setSortK]   = useState("revenue");
+      const [sortD, setSortD]   = useState("desc");
+      const [page, setPage]     = useState(0);
+      const [toast, setToast]   = useState("");
+      const fileRef = useRef();
+
+      const cats = useMemo(() => [...new Set(data.map(d => d.category))].sort(), [data]);
+      const regs = useMemo(() => [...new Set(data.map(d => d.region))].sort(), [data]);
+
+      const filtered = useMemo(() =>
+        data.filter(d =>
+          (catF.length === 0 || catF.includes(d.category)) &&
+          (regF.length === 0 || regF.includes(d.region))
+        ), [data, catF, regF]);
+
+      // KPIs
+      const kpis = useMemo(() => {
+        const rev   = filtered.reduce((s, d) => s + d.revenue, 0);
+        const units = filtered.reduce((s, d) => s + d.units, 0);
+        const byP = {};
+        filtered.forEach(d => { byP[d.product] = (byP[d.product] || 0) + d.revenue; });
+        const top = Object.entries(byP).sort((a, b) => b[1] - a[1])[0];
+        const mons = [...new Set(filtered.map(d => d.month))].sort((a, b) => MONTHS.indexOf(a) - MONTHS.indexOf(b));
+        const half = Math.floor(mons.length / 2);
+        const h1 = filtered.filter(d => mons.slice(0, half).includes(d.month)).reduce((s, d) => s + d.revenue, 0);
+        const h2 = filtered.filter(d => mons.slice(half).includes(d.month)).reduce((s, d) => s + d.revenue, 0);
+        return {
+          rev, units,
+          avgP:   units > 0 ? Math.round(rev / units) : 0,
+          growth: h1 > 0 ? ((h2 - h1) / h1) * 100 : 0,
+          top:    top ? top[0] : "–",
+          topRev: top ? top[1] : 0
+        };
+      }, [filtered]);
+
+      // Chart data
+      const trendData = useMemo(() => {
+        const m = {};
+        filtered.forEach(d => {
+          if (!m[d.month]) m[d.month] = { month: d.month, revenue: 0, units: 0 };
+          m[d.month].revenue += d.revenue;
+          m[d.month].units   += d.units;
+        });
+        return Object.values(m).sort((a, b) => MONTHS.indexOf(a.month) - MONTHS.indexOf(b.month));
+      }, [filtered]);
+
+      const topProds = useMemo(() => {
+        const m = {};
+        filtered.forEach(d => {
+          if (!m[d.product]) m[d.product] = { product: d.product, revenue: 0 };
+          m[d.product].revenue += d.revenue;
+        });
+        return Object.values(m).sort((a, b) => b.revenue - a.revenue).slice(0, 6);
+      }, [filtered]);
+
+      const catPie = useMemo(() => {
+        const m = {};
+        filtered.forEach(d => { m[d.category] = (m[d.category] || 0) + d.revenue; });
+        return Object.entries(m).map(([name, value]) => ({ name, value })).sort((a, b) => b.value - a.value);
+      }, [filtered]);
+
+      const regData = useMemo(() => {
+        const m = {};
+        filtered.forEach(d => {
+          if (!m[d.region]) m[d.region] = { region: d.region, revenue: 0, units: 0 };
+          m[d.region].revenue += d.revenue;
+          m[d.region].units   += d.units;
+        });
+        return Object.values(m).sort((a, b) => b.revenue - a.revenue);
+      }, [filtered]);
+
+      // Table
+      const tableRows = useMemo(() => {
+        const arr = [...filtered];
+        arr.sort((a, b) => {
+          const av = a[sortK], bv = b[sortK];
+          return sortD === "asc"
+            ? (typeof av === "string" ? av.localeCompare(bv) : av - bv)
+            : (typeof av === "string" ? bv.localeCompare(av) : bv - av);
+        });
+        return arr;
+      }, [filtered, sortK, sortD]);
+
+      const PAGE_SZ  = 10;
+      const totalP   = Math.max(1, Math.ceil(tableRows.length / PAGE_SZ));
+      const pageRows = tableRows.slice(page * PAGE_SZ, (page + 1) * PAGE_SZ);
+
+      // File import
+      const parseFile = useCallback(file => {
+        if (!file) return;
+        const ext = file.name.split(".").pop().toLowerCase();
+        const onRows = rows => {
+          const mapped = mapCols(rows);
+          if (mapped.length) {
+            setData(mapped); setSrc(file.name); setCatF([]); setRegF([]); setPage(0);
+            setToast(`✓ Loaded ${mapped.length} rows`);
+            setTimeout(() => setToast(""), 3000);
+          }
+        };
+        if (ext === "csv") {
+          Papa.parse(file, { header: true, skipEmptyLines: true, complete: ({ data: r }) => onRows(r) });
+        } else if (ext === "xlsx" || ext === "xls") {
+          const fr = new FileReader();
+          fr.onload = e => {
+            const wb = XLSX.read(e.target.result, { type: "array" });
+            onRows(XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]));
+          };
+          fr.readAsArrayBuffer(file);
+        }
+      }, []);
+
+      const handleDrop = useCallback(e => {
+        e.preventDefault(); setIsDrag(false);
+        parseFile(e.dataTransfer.files[0]);
+      }, [parseFile]);
+
+      const toggleF    = (arr, setArr, val) => { setArr(p => p.includes(val) ? p.filter(v => v !== val) : [...p, val]); setPage(0); };
+      const handleSort = k => { setSortK(k); setSortD(p => k === sortK ? (p === "asc" ? "desc" : "asc") : "desc"); setPage(0); };
+
+      function SortTh({ col, label, align }) {
+        return (
+          <th onClick={() => handleSort(col)}
+            style={{ padding: "10px 14px", textAlign: align || "left", fontSize: 11, color: sortK === col ? C.accent : C.sub, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".08em", cursor: "pointer", userSelect: "none", whiteSpace: "nowrap" }}
+          >{label} {sortK === col ? (sortD === "asc" ? "↑" : "↓") : ""}</th>
+        );
+      }
+
+      return (
+        <div
+          style={{ fontFamily: "'Plus Jakarta Sans',sans-serif", background: C.bg, color: C.text, minHeight: "100vh", paddingBottom: 40 }}
+          onDragOver={e => { e.preventDefault(); setIsDrag(true); }}
+        >
+          {/* Drag Overlay */}
+          {isDrag && (
+            <div
+              style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.88)", border: `3px dashed ${C.accent}`, zIndex: 100, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 14, color: C.accent, fontFamily: "'Syne',sans-serif", fontSize: 22, fontWeight: 700 }}
+              onDragOver={e => e.preventDefault()}
+              onDragLeave={() => setIsDrag(false)}
+              onDrop={handleDrop}
+            >
+              <div style={{ fontSize: 56 }}>📂</div>
+              Drop your CSV or Excel file
+              <div style={{ fontSize: 14, color: C.sub, fontWeight: 400 }}>Auto-detects date, product, category, region, units, revenue columns</div>
+            </div>
+          )}
+
+          {/* Toast */}
+          {toast && (
+            <div style={{ position: "fixed", bottom: 24, right: 24, background: C.green, color: "#000", padding: "10px 18px", borderRadius: 8, fontWeight: 700, fontSize: 13, zIndex: 200 }}>
+              {toast}
+            </div>
+          )}
+
+          {/* Header */}
+          <header style={{ background: C.surface, borderBottom: `1px solid ${C.border}`, padding: "14px 28px", display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <div style={{ width: 36, height: 36, borderRadius: 9, background: C.accent, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 16, color: "#000", flexShrink: 0 }}>S</div>
+              <div>
+                <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 800, fontSize: 18, color: C.text, lineHeight: 1.2 }}>SalesIQ</div>
+                <div style={{ fontSize: 11, color: C.sub }}>Revenue Intelligence · FY 2024</div>
+              </div>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap" }}>
+              <div style={{ fontSize: 12, color: C.sub, display: "flex", alignItems: "center", gap: 6 }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: src === "Sample Data" ? C.accent : C.green, display: "inline-block" }} />
+                {src} · {filtered.length.toLocaleString()} records
+              </div>
+              <input ref={fileRef} type="file" accept=".csv,.xlsx,.xls" style={{ display: "none" }} onChange={e => parseFile(e.target.files[0])} />
+              <button
+                onClick={() => fileRef.current.click()}
+                style={{ display: "flex", alignItems: "center", gap: 8, background: C.accentA, border: `1px solid ${C.accent}55`, color: C.accent, padding: "8px 16px", borderRadius: 8, cursor: "pointer", fontSize: 13, fontWeight: 700 }}
+              >↑ Import CSV / Excel</button>
+              <button
+                onClick={() => { setData(SAMPLE); setSrc("Sample Data"); setCatF([]); setRegF([]); setPage(0); }}
+                style={{ background: "transparent", border: `1px solid ${C.border}`, color: C.sub, padding: "8px 14px", borderRadius: 8, cursor: "pointer", fontSize: 12, fontWeight: 500 }}
+              >Reset</button>
+            </div>
+          </header>
+
+          {/* Filter Bar */}
+          <div style={{ background: C.surface, borderBottom: `1px solid ${C.border}`, padding: "10px 28px", display: "flex", gap: 24, flexWrap: "wrap", alignItems: "center" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+              <span style={{ fontSize: 11, color: C.dim, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em" }}>Category</span>
+              <Pill label="All" active={catF.length === 0} onClick={() => { setCatF([]); setPage(0); }} />
+              {cats.map(c => <Pill key={c} label={c} active={catF.includes(c)} onClick={() => toggleF(catF, setCatF, c)} />)}
+            </div>
+            <div style={{ width: 1, height: 20, background: C.border, flexShrink: 0 }} />
+            <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+              <span style={{ fontSize: 11, color: C.dim, fontWeight: 700, textTransform: "uppercase", letterSpacing: ".1em" }}>Region</span>
+              <Pill label="All" active={regF.length === 0} onClick={() => { setRegF([]); setPage(0); }} />
+              {regs.map(r => <Pill key={r} label={r} active={regF.includes(r)} onClick={() => toggleF(regF, setRegF, r)} />)}
+            </div>
+          </div>
+
+          {/* Main Content */}
+          <main style={{ padding: "22px 28px", display: "flex", flexDirection: "column", gap: 18 }}>
+
+            {/* KPI Cards */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 14 }}>
+              <KPICard label="Total Revenue"   value={fmtK(kpis.rev)}     trend={kpis.growth} badge="H1 vs H2"               color={C.accent} />
+              <KPICard label="Units Sold"      value={fmtNum(kpis.units)}  badge={`${filtered.length} lines`}                  color={C.blue}   />
+              <KPICard label="Avg. Unit Price" value={fmtK(kpis.avgP)}     badge="weighted avg"                                color={C.purple} />
+              <KPICard label="Top Product"     value={kpis.top.length > 14 ? kpis.top.slice(0,13)+"…" : kpis.top} badge={fmtK(kpis.topRev)} color={C.green} />
+            </div>
+
+            {/* Row 1: Trend + Donut */}
+            <div style={{ display: "grid", gridTemplateColumns: "1.65fr 1fr", gap: 14 }}>
+              <ChartCard title="Revenue Trend" sub="Monthly revenue over the year">
+                <ResponsiveContainer width="100%" height={232}>
+                  <AreaChart data={trendData} margin={{ top: 4, right: 12, bottom: 0, left: 0 }}>
+                    <defs>
+                      <linearGradient id="gA" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%"  stopColor={C.accent} stopOpacity={0.35} />
+                        <stop offset="95%" stopColor={C.accent} stopOpacity={0}    />
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid stroke={C.border} strokeDasharray="3 3" vertical={false} />
+                    <XAxis dataKey="month" stroke={C.dim} tick={{ fill: C.sub, fontSize: 11 }} tickLine={false} axisLine={false} />
+                    <YAxis stroke={C.dim} tick={{ fill: C.sub, fontSize: 11 }} tickLine={false} axisLine={false} tickFormatter={fmtK} width={58} />
+                    <Tooltip content={<Tip />} />
+                    <Area type="monotone" dataKey="revenue" name="Revenue" stroke={C.accent} strokeWidth={2.5} fill="url(#gA)" dot={false} activeDot={{ r: 4, fill: C.accent, stroke: "none" }} />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </ChartCard>
+
+              <ChartCard title="Category Mix" sub="Revenue share by category">
+                <ResponsiveContainer width="100%" height={170}>
+                  <PieChart>
+                    <Pie data={catPie} cx="50%" cy="50%" innerRadius={48} outerRadius={78} paddingAngle={3} dataKey="value">
+                      {catPie.map((_, i) => <Cell key={i} fill={C.chart[i % C.chart.length]} stroke="none" />)}
+                    </Pie>
+                    <Tooltip content={<Tip />} />
+                  </PieChart>
+                </ResponsiveContainer>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "5px 14px", marginTop: 6 }}>
+                  {catPie.map((d, i) => (
+                    <div key={d.name} style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12 }}>
+                      <span style={{ width: 8, height: 8, borderRadius: 2, background: C.chart[i % C.chart.length], display: "inline-block", flexShrink: 0 }} />
+                      <span style={{ color: C.sub }}>{d.name}</span>
+                      <span style={{ fontFamily: "'DM Mono',monospace", fontSize: 11, color: C.text }}>{fmtK(d.value)}</span>
+                    </div>
+                  ))}
+                </div>
+              </ChartCard>
+            </div>
+
+            {/* Row 2: Top Products + Regional */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+              <ChartCard title="Top Products" sub="Revenue ranked, top 6">
+                <ResponsiveContainer width="100%" height={245}>
+                  <BarChart data={topProds} layout="vertical" margin={{ top: 0, right: 14, bottom: 0, left: 0 }}>
+                    <CartesianGrid stroke={C.border} strokeDasharray="3 3" horizontal={false} />
+                    <XAxis type="number" stroke={C.dim} tick={{ fill: C.sub, fontSize: 11 }} tickLine={false} axisLine={false} tickFormatter={fmtK} />
+                    <YAxis type="category" dataKey="product" width={112} stroke={C.dim} tick={{ fill: C.sub, fontSize: 11 }} tickLine={false} axisLine={false} tickFormatter={v => v.length > 14 ? v.slice(0,13)+"…" : v} />
+                    <Tooltip content={<Tip />} />
+                    <Bar dataKey="revenue" name="Revenue" radius={[0, 4, 4, 0]}>
+                      {topProds.map((_, i) => <Cell key={i} fill={C.chart[i % C.chart.length]} fillOpacity={0.88} />)}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </ChartCard>
+
+              <ChartCard title="Regional Performance" sub="Revenue by territory">
+                <ResponsiveContainer width="100%" height={192}>
+                  <BarChart data={regData} margin={{ top: 0, right: 14, bottom: 0, left: 0 }}>
+                    <CartesianGrid stroke={C.border} strokeDasharray="3 3" vertical={false} />
+                    <XAxis dataKey="region" stroke={C.dim} tick={{ fill: C.sub, fontSize: 11 }} tickLine={false} axisLine={false} />
+                    <YAxis stroke={C.dim} tick={{ fill: C.sub, fontSize: 11 }} tickLine={false} axisLine={false} tickFormatter={fmtK} width={58} />
+                    <Tooltip content={<Tip />} />
+                    <Bar dataKey="revenue" name="Revenue" radius={[4, 4, 0, 0]}>
+                      {regData.map((_, i) => <Cell key={i} fill={C.chart[i % C.chart.length]} fillOpacity={0.88} />)}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginTop: 12 }}>
+                  {regData.map((r, i) => (
+                    <div key={r.region} style={{ background: `${C.chart[i % C.chart.length]}14`, border: `1px solid ${C.chart[i % C.chart.length]}33`, borderRadius: 6, padding: "6px 10px" }}>
+                      <div style={{ fontSize: 10, fontWeight: 700, color: C.chart[i % C.chart.length], textTransform: "uppercase", letterSpacing: ".06em" }}>{r.region}</div>
+                      <div style={{ fontFamily: "'DM Mono',monospace", fontSize: 13, fontWeight: 500, color: C.text }}>{fmtK(r.revenue)}</div>
+                      <div style={{ fontSize: 11, color: C.sub }}>{r.units.toLocaleString()} units</div>
+                    </div>
+                  ))}
+                </div>
+              </ChartCard>
+            </div>
+
+            {/* Data Table */}
+            <div style={{ background: C.card, border: `1px solid ${C.border}`, borderRadius: 12, overflow: "hidden" }}>
+              <div style={{ padding: "16px 22px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 10 }}>
+                <div>
+                  <div style={{ fontFamily: "'Syne',sans-serif", fontWeight: 700, fontSize: 15, color: C.text }}>Transaction Data</div>
+                  <div style={{ fontSize: 12, color: C.sub, marginTop: 2 }}>Click column headers to sort · {filtered.length.toLocaleString()} records</div>
+                </div>
+                <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <button disabled={page === 0} onClick={() => setPage(p => p - 1)}
+                    style={{ background: C.border, border: "none", color: page === 0 ? C.dim : C.text, padding: "6px 13px", borderRadius: 6, cursor: page === 0 ? "default" : "pointer", fontSize: 15 }}>‹</button>
+                  <span style={{ fontSize: 12, color: C.sub, minWidth: 64, textAlign: "center" }}>{page + 1} / {totalP}</span>
+                  <button disabled={page >= totalP - 1} onClick={() => setPage(p => p + 1)}
+                    style={{ background: C.border, border: "none", color: page >= totalP - 1 ? C.dim : C.text, padding: "6px 13px", borderRadius: 6, cursor: page >= totalP - 1 ? "default" : "pointer", fontSize: 15 }}>›</button>
+                </div>
+              </div>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                  <thead>
+                    <tr style={{ borderBottom: `1px solid ${C.border}` }}>
+                      <SortTh col="month"    label="Month"     />
+                      <SortTh col="product"  label="Product"   />
+                      <SortTh col="category" label="Category"  />
+                      <SortTh col="region"   label="Region"    />
+                      <SortTh col="units"    label="Units"     align="right" />
+                      <SortTh col="revenue"  label="Revenue"   align="right" />
+                      <SortTh col="avgPrice" label="Avg Price" align="right" />
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {pageRows.map((row, i) => (
+                      <tr key={row.id}
+                        style={{ background: i % 2 === 0 ? "transparent" : `${C.surface}66`, transition: "background .1s" }}
+                        onMouseEnter={e => e.currentTarget.style.background = C.surface}
+                        onMouseLeave={e => e.currentTarget.style.background = i % 2 === 0 ? "transparent" : `${C.surface}66`}
+                      >
+                        <td style={{ padding: "9px 14px", fontSize: 12, fontFamily: "'DM Mono',monospace", color: C.sub, borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>{row.month}</td>
+                        <td style={{ padding: "9px 14px", fontSize: 13, fontWeight: 500, color: C.text, borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>{row.product}</td>
+                        <td style={{ padding: "9px 14px", borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>
+                          <span style={{ padding: "2px 8px", borderRadius: 4, fontSize: 11, fontWeight: 700, background: `${C.chart[cats.indexOf(row.category) % C.chart.length]}22`, color: C.chart[cats.indexOf(row.category) % C.chart.length] }}>{row.category}</span>
+                        </td>
+                        <td style={{ padding: "9px 14px", fontSize: 13, color: C.sub, borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>{row.region}</td>
+                        <td style={{ padding: "9px 14px", fontSize: 12, fontFamily: "'DM Mono',monospace", textAlign: "right", color: C.text, borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>{row.units.toLocaleString()}</td>
+                        <td style={{ padding: "9px 14px", fontSize: 12, fontFamily: "'DM Mono',monospace", textAlign: "right", color: C.accent, fontWeight: 500, borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>{fmtFull(row.revenue)}</td>
+                        <td style={{ padding: "9px 14px", fontSize: 12, fontFamily: "'DM Mono',monospace", textAlign: "right", color: C.sub, borderBottom: `1px solid ${C.border}22`, whiteSpace: "nowrap" }}>{fmtFull(row.avgPrice)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div style={{ textAlign: "center", fontSize: 11, color: C.dim, paddingTop: 4 }}>
+              Drag & drop a CSV or Excel file anywhere on the page to import your own data
+            </div>
+          </main>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<Dashboard />);
+  </script>
+</body>
+</html>
