@@ -1,0 +1,481 @@
+date,product,category,region,units,revenue
+2024-01,Cold Brew Coffee,Beverages,North,64,548.03
+2024-01,Cold Brew Coffee,Beverages,South,41,358.39
+2024-01,Cold Brew Coffee,Beverages,East,71,649.57
+2024-01,Cold Brew Coffee,Beverages,West,81,698.11
+2024-01,Matcha Latte Mix,Beverages,North,51,607.04
+2024-01,Matcha Latte Mix,Beverages,South,37,462.38
+2024-01,Matcha Latte Mix,Beverages,East,25,302.85
+2024-01,Matcha Latte Mix,Beverages,West,65,815.5
+2024-01,Sparkling Water,Beverages,North,38,191.31
+2024-01,Sparkling Water,Beverages,South,75,355.78
+2024-01,Sparkling Water,Beverages,East,75,381.67
+2024-01,Sparkling Water,Beverages,West,45,216.81
+2024-01,Energy Drink Pack,Beverages,North,85,1587.77
+2024-01,Energy Drink Pack,Beverages,South,29,528.5
+2024-01,Energy Drink Pack,Beverages,East,78,1496.58
+2024-01,Energy Drink Pack,Beverages,West,75,1456.97
+2024-01,Protein Bar Box,Snacks,North,58,1517.99
+2024-01,Protein Bar Box,Snacks,South,48,1205.76
+2024-01,Protein Bar Box,Snacks,East,77,1947.04
+2024-01,Protein Bar Box,Snacks,West,79,1989.48
+2024-01,Trail Mix Bag,Snacks,North,69,625.07
+2024-01,Trail Mix Bag,Snacks,South,38,353.02
+2024-01,Trail Mix Bag,Snacks,East,29,267.86
+2024-01,Trail Mix Bag,Snacks,West,30,278.38
+2024-01,Granola Clusters,Snacks,North,64,504.45
+2024-01,Granola Clusters,Snacks,South,47,364.62
+2024-01,Granola Clusters,Snacks,East,41,341.89
+2024-01,Granola Clusters,Snacks,West,65,525.02
+2024-01,Dark Chocolate,Snacks,North,34,190.94
+2024-01,Dark Chocolate,Snacks,South,34,184.41
+2024-01,Dark Chocolate,Snacks,East,87,484.32
+2024-01,Dark Chocolate,Snacks,West,59,329.89
+2024-01,Almond Butter,Pantry,North,77,1106.96
+2024-01,Almond Butter,Pantry,South,38,506.75
+2024-01,Almond Butter,Pantry,East,44,601.26
+2024-01,Almond Butter,Pantry,West,37,540.56
+2024-01,Olive Oil 500ml,Pantry,North,80,1334.01
+2024-01,Olive Oil 500ml,Pantry,South,65,1092.82
+2024-01,Olive Oil 500ml,Pantry,East,82,1387.45
+2024-01,Olive Oil 500ml,Pantry,West,40,662.38
+2024-02,Cold Brew Coffee,Beverages,North,61,535.38
+2024-02,Cold Brew Coffee,Beverages,South,63,588.9
+2024-02,Cold Brew Coffee,Beverages,East,51,445.62
+2024-02,Cold Brew Coffee,Beverages,West,90,809.87
+2024-02,Matcha Latte Mix,Beverages,North,30,357.73
+2024-02,Matcha Latte Mix,Beverages,South,32,404.77
+2024-02,Matcha Latte Mix,Beverages,East,77,954.24
+2024-02,Matcha Latte Mix,Beverages,West,29,357.92
+2024-02,Sparkling Water,Beverages,North,90,450.41
+2024-02,Sparkling Water,Beverages,South,89,460.13
+2024-02,Sparkling Water,Beverages,East,25,127.5
+2024-02,Sparkling Water,Beverages,West,69,345.58
+2024-02,Energy Drink Pack,Beverages,North,42,808.82
+2024-02,Energy Drink Pack,Beverages,South,32,603.72
+2024-02,Energy Drink Pack,Beverages,East,54,1072.0
+2024-02,Energy Drink Pack,Beverages,West,82,1520.34
+2024-02,Protein Bar Box,Snacks,North,57,1378.66
+2024-02,Protein Bar Box,Snacks,South,85,2202.85
+2024-02,Protein Bar Box,Snacks,East,44,1114.84
+2024-02,Protein Bar Box,Snacks,West,65,1567.96
+2024-02,Trail Mix Bag,Snacks,North,75,714.55
+2024-02,Trail Mix Bag,Snacks,South,76,723.43
+2024-02,Trail Mix Bag,Snacks,East,24,223.75
+2024-02,Trail Mix Bag,Snacks,West,26,257.33
+2024-02,Granola Clusters,Snacks,North,82,676.91
+2024-02,Granola Clusters,Snacks,South,45,343.66
+2024-02,Granola Clusters,Snacks,East,82,684.46
+2024-02,Granola Clusters,Snacks,West,30,239.36
+2024-02,Dark Chocolate,Snacks,North,29,163.36
+2024-02,Dark Chocolate,Snacks,South,75,396.45
+2024-02,Dark Chocolate,Snacks,East,56,308.97
+2024-02,Dark Chocolate,Snacks,West,42,239.17
+2024-02,Almond Butter,Pantry,North,52,706.51
+2024-02,Almond Butter,Pantry,South,60,858.7
+2024-02,Almond Butter,Pantry,East,38,521.61
+2024-02,Almond Butter,Pantry,West,90,1277.97
+2024-02,Olive Oil 500ml,Pantry,North,53,902.05
+2024-02,Olive Oil 500ml,Pantry,South,32,528.71
+2024-02,Olive Oil 500ml,Pantry,East,47,805.58
+2024-02,Olive Oil 500ml,Pantry,West,40,660.59
+2024-03,Cold Brew Coffee,Beverages,North,32,291.45
+2024-03,Cold Brew Coffee,Beverages,South,43,402.24
+2024-03,Cold Brew Coffee,Beverages,East,88,757.17
+2024-03,Cold Brew Coffee,Beverages,West,44,402.24
+2024-03,Matcha Latte Mix,Beverages,North,42,505.29
+2024-03,Matcha Latte Mix,Beverages,South,94,1182.4
+2024-03,Matcha Latte Mix,Beverages,East,61,783.57
+2024-03,Matcha Latte Mix,Beverages,West,85,1028.78
+2024-03,Sparkling Water,Beverages,North,33,163.53
+2024-03,Sparkling Water,Beverages,South,57,283.49
+2024-03,Sparkling Water,Beverages,East,79,401.04
+2024-03,Sparkling Water,Beverages,West,97,464.59
+2024-03,Energy Drink Pack,Beverages,North,55,1027.67
+2024-03,Energy Drink Pack,Beverages,South,89,1647.63
+2024-03,Energy Drink Pack,Beverages,East,40,755.7
+2024-03,Energy Drink Pack,Beverages,West,57,1058.46
+2024-03,Protein Bar Box,Snacks,North,44,1146.1
+2024-03,Protein Bar Box,Snacks,South,58,1501.79
+2024-03,Protein Bar Box,Snacks,East,66,1575.22
+2024-03,Protein Bar Box,Snacks,West,98,2531.31
+2024-03,Trail Mix Bag,Snacks,North,96,949.88
+2024-03,Trail Mix Bag,Snacks,South,88,807.25
+2024-03,Trail Mix Bag,Snacks,East,61,562.32
+2024-03,Trail Mix Bag,Snacks,West,55,498.91
+2024-03,Granola Clusters,Snacks,North,54,452.4
+2024-03,Granola Clusters,Snacks,South,46,377.98
+2024-03,Granola Clusters,Snacks,East,59,467.78
+2024-03,Granola Clusters,Snacks,West,95,796.66
+2024-03,Dark Chocolate,Snacks,North,67,375.86
+2024-03,Dark Chocolate,Snacks,South,38,204.38
+2024-03,Dark Chocolate,Snacks,East,96,531.21
+2024-03,Dark Chocolate,Snacks,West,66,371.33
+2024-03,Almond Butter,Pantry,North,31,437.34
+2024-03,Almond Butter,Pantry,South,63,912.46
+2024-03,Almond Butter,Pantry,East,38,556.12
+2024-03,Almond Butter,Pantry,West,32,433.62
+2024-03,Olive Oil 500ml,Pantry,North,69,1192.85
+2024-03,Olive Oil 500ml,Pantry,South,43,702.8
+2024-03,Olive Oil 500ml,Pantry,East,91,1506.85
+2024-03,Olive Oil 500ml,Pantry,West,69,1186.31
+2024-04,Cold Brew Coffee,Beverages,North,63,571.11
+2024-04,Cold Brew Coffee,Beverages,South,71,666.04
+2024-04,Cold Brew Coffee,Beverages,East,46,422.48
+2024-04,Cold Brew Coffee,Beverages,West,49,435.92
+2024-04,Matcha Latte Mix,Beverages,North,83,1015.94
+2024-04,Matcha Latte Mix,Beverages,South,55,704.25
+2024-04,Matcha Latte Mix,Beverages,East,35,435.33
+2024-04,Matcha Latte Mix,Beverages,West,109,1428.95
+2024-04,Sparkling Water,Beverages,North,35,169.64
+2024-04,Sparkling Water,Beverages,South,51,265.52
+2024-04,Sparkling Water,Beverages,East,100,517.93
+2024-04,Sparkling Water,Beverages,West,59,284.33
+2024-04,Energy Drink Pack,Beverages,North,96,1860.15
+2024-04,Energy Drink Pack,Beverages,South,78,1553.39
+2024-04,Energy Drink Pack,Beverages,East,82,1480.54
+2024-04,Energy Drink Pack,Beverages,West,95,1767.86
+2024-04,Protein Bar Box,Snacks,North,83,2165.21
+2024-04,Protein Bar Box,Snacks,South,40,961.16
+2024-04,Protein Bar Box,Snacks,East,38,954.67
+2024-04,Protein Bar Box,Snacks,West,51,1287.85
+2024-04,Trail Mix Bag,Snacks,North,87,801.16
+2024-04,Trail Mix Bag,Snacks,South,80,741.28
+2024-04,Trail Mix Bag,Snacks,East,69,681.35
+2024-04,Trail Mix Bag,Snacks,West,97,883.0
+2024-04,Granola Clusters,Snacks,North,63,492.13
+2024-04,Granola Clusters,Snacks,South,30,246.2
+2024-04,Granola Clusters,Snacks,East,80,623.98
+2024-04,Granola Clusters,Snacks,West,89,714.79
+2024-04,Dark Chocolate,Snacks,North,64,334.13
+2024-04,Dark Chocolate,Snacks,South,36,205.21
+2024-04,Dark Chocolate,Snacks,East,102,562.53
+2024-04,Dark Chocolate,Snacks,West,96,531.39
+2024-04,Almond Butter,Pantry,North,41,552.22
+2024-04,Almond Butter,Pantry,South,54,785.6
+2024-04,Almond Butter,Pantry,East,93,1348.0
+2024-04,Almond Butter,Pantry,West,101,1372.02
+2024-04,Olive Oil 500ml,Pantry,North,49,799.44
+2024-04,Olive Oil 500ml,Pantry,South,92,1623.12
+2024-04,Olive Oil 500ml,Pantry,East,62,1066.09
+2024-04,Olive Oil 500ml,Pantry,West,42,744.26
+2024-05,Cold Brew Coffee,Beverages,North,109,1026.57
+2024-05,Cold Brew Coffee,Beverages,South,104,970.62
+2024-05,Cold Brew Coffee,Beverages,East,35,322.09
+2024-05,Cold Brew Coffee,Beverages,West,62,581.39
+2024-05,Matcha Latte Mix,Beverages,North,103,1333.31
+2024-05,Matcha Latte Mix,Beverages,South,104,1268.67
+2024-05,Matcha Latte Mix,Beverages,East,102,1224.05
+2024-05,Matcha Latte Mix,Beverages,West,109,1410.23
+2024-05,Sparkling Water,Beverages,North,52,267.69
+2024-05,Sparkling Water,Beverages,South,73,357.17
+2024-05,Sparkling Water,Beverages,East,102,495.12
+2024-05,Sparkling Water,Beverages,West,35,169.29
+2024-05,Energy Drink Pack,Beverages,North,61,1200.6
+2024-05,Energy Drink Pack,Beverages,South,118,2191.33
+2024-05,Energy Drink Pack,Beverages,East,89,1673.15
+2024-05,Energy Drink Pack,Beverages,West,119,2267.99
+2024-05,Protein Bar Box,Snacks,North,115,2763.3
+2024-05,Protein Bar Box,Snacks,South,118,2854.04
+2024-05,Protein Bar Box,Snacks,East,117,2855.26
+2024-05,Protein Bar Box,Snacks,West,42,1042.71
+2024-05,Trail Mix Bag,Snacks,North,97,903.38
+2024-05,Trail Mix Bag,Snacks,South,86,817.07
+2024-05,Trail Mix Bag,Snacks,East,66,631.14
+2024-05,Trail Mix Bag,Snacks,West,55,532.85
+2024-05,Granola Clusters,Snacks,North,33,274.89
+2024-05,Granola Clusters,Snacks,South,80,653.23
+2024-05,Granola Clusters,Snacks,East,98,796.38
+2024-05,Granola Clusters,Snacks,West,65,497.02
+2024-05,Dark Chocolate,Snacks,North,91,491.11
+2024-05,Dark Chocolate,Snacks,South,60,340.86
+2024-05,Dark Chocolate,Snacks,East,96,516.52
+2024-05,Dark Chocolate,Snacks,West,60,326.38
+2024-05,Almond Butter,Pantry,North,68,931.88
+2024-05,Almond Butter,Pantry,South,44,610.66
+2024-05,Almond Butter,Pantry,East,115,1637.38
+2024-05,Almond Butter,Pantry,West,112,1584.98
+2024-05,Olive Oil 500ml,Pantry,North,59,1007.22
+2024-05,Olive Oil 500ml,Pantry,South,33,548.72
+2024-05,Olive Oil 500ml,Pantry,East,70,1198.81
+2024-05,Olive Oil 500ml,Pantry,West,90,1523.75
+2024-06,Cold Brew Coffee,Beverages,North,76,663.68
+2024-06,Cold Brew Coffee,Beverages,South,79,738.7
+2024-06,Cold Brew Coffee,Beverages,East,109,947.54
+2024-06,Cold Brew Coffee,Beverages,West,43,387.17
+2024-06,Matcha Latte Mix,Beverages,North,94,1154.71
+2024-06,Matcha Latte Mix,Beverages,South,112,1434.01
+2024-06,Matcha Latte Mix,Beverages,East,98,1190.32
+2024-06,Matcha Latte Mix,Beverages,West,53,630.49
+2024-06,Sparkling Water,Beverages,North,58,288.7
+2024-06,Sparkling Water,Beverages,South,114,544.56
+2024-06,Sparkling Water,Beverages,East,74,374.05
+2024-06,Sparkling Water,Beverages,West,53,269.66
+2024-06,Energy Drink Pack,Beverages,North,81,1498.81
+2024-06,Energy Drink Pack,Beverages,South,96,1732.9
+2024-06,Energy Drink Pack,Beverages,East,105,2047.8
+2024-06,Energy Drink Pack,Beverages,West,45,848.15
+2024-06,Protein Bar Box,Snacks,North,51,1332.86
+2024-06,Protein Bar Box,Snacks,South,83,1980.88
+2024-06,Protein Bar Box,Snacks,East,58,1499.91
+2024-06,Protein Bar Box,Snacks,West,78,2007.97
+2024-06,Trail Mix Bag,Snacks,North,97,965.44
+2024-06,Trail Mix Bag,Snacks,South,91,902.45
+2024-06,Trail Mix Bag,Snacks,East,118,1132.44
+2024-06,Trail Mix Bag,Snacks,West,102,968.44
+2024-06,Granola Clusters,Snacks,North,113,907.19
+2024-06,Granola Clusters,Snacks,South,119,973.98
+2024-06,Granola Clusters,Snacks,East,79,616.01
+2024-06,Granola Clusters,Snacks,West,58,469.8
+2024-06,Dark Chocolate,Snacks,North,107,588.68
+2024-06,Dark Chocolate,Snacks,South,94,504.43
+2024-06,Dark Chocolate,Snacks,East,42,225.64
+2024-06,Dark Chocolate,Snacks,West,60,323.46
+2024-06,Almond Butter,Pantry,North,85,1146.15
+2024-06,Almond Butter,Pantry,South,56,798.63
+2024-06,Almond Butter,Pantry,East,101,1351.42
+2024-06,Almond Butter,Pantry,West,73,1025.62
+2024-06,Olive Oil 500ml,Pantry,North,74,1220.4
+2024-06,Olive Oil 500ml,Pantry,South,74,1308.16
+2024-06,Olive Oil 500ml,Pantry,East,90,1559.0
+2024-06,Olive Oil 500ml,Pantry,West,115,2005.74
+2024-07,Cold Brew Coffee,Beverages,North,72,615.3
+2024-07,Cold Brew Coffee,Beverages,South,69,636.03
+2024-07,Cold Brew Coffee,Beverages,East,117,1099.52
+2024-07,Cold Brew Coffee,Beverages,West,76,700.15
+2024-07,Matcha Latte Mix,Beverages,North,88,1110.47
+2024-07,Matcha Latte Mix,Beverages,South,57,691.95
+2024-07,Matcha Latte Mix,Beverages,East,77,916.43
+2024-07,Matcha Latte Mix,Beverages,West,68,864.53
+2024-07,Sparkling Water,Beverages,North,74,356.89
+2024-07,Sparkling Water,Beverages,South,80,384.33
+2024-07,Sparkling Water,Beverages,East,95,451.63
+2024-07,Sparkling Water,Beverages,West,73,366.62
+2024-07,Energy Drink Pack,Beverages,North,38,731.92
+2024-07,Energy Drink Pack,Beverages,South,49,926.95
+2024-07,Energy Drink Pack,Beverages,East,40,750.42
+2024-07,Energy Drink Pack,Beverages,West,56,1045.03
+2024-07,Protein Bar Box,Snacks,North,109,2690.99
+2024-07,Protein Bar Box,Snacks,South,108,2788.5
+2024-07,Protein Bar Box,Snacks,East,60,1436.71
+2024-07,Protein Bar Box,Snacks,West,37,928.27
+2024-07,Trail Mix Bag,Snacks,North,131,1224.54
+2024-07,Trail Mix Bag,Snacks,South,98,956.18
+2024-07,Trail Mix Bag,Snacks,East,98,953.66
+2024-07,Trail Mix Bag,Snacks,West,127,1169.0
+2024-07,Granola Clusters,Snacks,North,37,285.35
+2024-07,Granola Clusters,Snacks,South,48,390.02
+2024-07,Granola Clusters,Snacks,East,90,698.82
+2024-07,Granola Clusters,Snacks,West,103,844.93
+2024-07,Dark Chocolate,Snacks,North,52,288.54
+2024-07,Dark Chocolate,Snacks,South,107,564.79
+2024-07,Dark Chocolate,Snacks,East,114,654.95
+2024-07,Dark Chocolate,Snacks,West,46,240.56
+2024-07,Almond Butter,Pantry,North,65,925.48
+2024-07,Almond Butter,Pantry,South,127,1758.37
+2024-07,Almond Butter,Pantry,East,104,1393.27
+2024-07,Almond Butter,Pantry,West,102,1445.14
+2024-07,Olive Oil 500ml,Pantry,North,45,785.38
+2024-07,Olive Oil 500ml,Pantry,South,117,2007.79
+2024-07,Olive Oil 500ml,Pantry,East,47,837.17
+2024-07,Olive Oil 500ml,Pantry,West,111,1857.07
+2024-08,Cold Brew Coffee,Beverages,North,75,665.52
+2024-08,Cold Brew Coffee,Beverages,South,82,725.48
+2024-08,Cold Brew Coffee,Beverages,East,114,1057.89
+2024-08,Cold Brew Coffee,Beverages,West,45,423.19
+2024-08,Matcha Latte Mix,Beverages,North,94,1212.65
+2024-08,Matcha Latte Mix,Beverages,South,101,1253.35
+2024-08,Matcha Latte Mix,Beverages,East,104,1359.42
+2024-08,Matcha Latte Mix,Beverages,West,60,772.5
+2024-08,Sparkling Water,Beverages,North,85,423.45
+2024-08,Sparkling Water,Beverages,South,76,388.0
+2024-08,Sparkling Water,Beverages,East,60,309.93
+2024-08,Sparkling Water,Beverages,West,113,540.56
+2024-08,Energy Drink Pack,Beverages,North,117,2164.92
+2024-08,Energy Drink Pack,Beverages,South,78,1497.56
+2024-08,Energy Drink Pack,Beverages,East,70,1266.65
+2024-08,Energy Drink Pack,Beverages,West,115,2114.37
+2024-08,Protein Bar Box,Snacks,North,55,1415.39
+2024-08,Protein Bar Box,Snacks,South,67,1738.01
+2024-08,Protein Bar Box,Snacks,East,101,2467.52
+2024-08,Protein Bar Box,Snacks,West,36,939.95
+2024-08,Trail Mix Bag,Snacks,North,43,417.05
+2024-08,Trail Mix Bag,Snacks,South,81,788.53
+2024-08,Trail Mix Bag,Snacks,East,100,962.85
+2024-08,Trail Mix Bag,Snacks,West,81,791.21
+2024-08,Granola Clusters,Snacks,North,43,334.0
+2024-08,Granola Clusters,Snacks,South,100,783.52
+2024-08,Granola Clusters,Snacks,East,89,709.21
+2024-08,Granola Clusters,Snacks,West,85,674.09
+2024-08,Dark Chocolate,Snacks,North,105,566.7
+2024-08,Dark Chocolate,Snacks,South,101,541.79
+2024-08,Dark Chocolate,Snacks,East,58,306.34
+2024-08,Dark Chocolate,Snacks,West,53,279.9
+2024-08,Almond Butter,Pantry,North,85,1220.33
+2024-08,Almond Butter,Pantry,South,52,706.85
+2024-08,Almond Butter,Pantry,East,80,1144.34
+2024-08,Almond Butter,Pantry,West,126,1767.08
+2024-08,Olive Oil 500ml,Pantry,North,61,994.99
+2024-08,Olive Oil 500ml,Pantry,South,53,875.93
+2024-08,Olive Oil 500ml,Pantry,East,52,840.56
+2024-08,Olive Oil 500ml,Pantry,West,85,1411.56
+2024-09,Cold Brew Coffee,Beverages,North,118,1066.48
+2024-09,Cold Brew Coffee,Beverages,South,94,813.48
+2024-09,Cold Brew Coffee,Beverages,East,109,979.02
+2024-09,Cold Brew Coffee,Beverages,West,109,987.17
+2024-09,Matcha Latte Mix,Beverages,North,74,918.76
+2024-09,Matcha Latte Mix,Beverages,South,49,584.55
+2024-09,Matcha Latte Mix,Beverages,East,115,1433.15
+2024-09,Matcha Latte Mix,Beverages,West,105,1298.43
+2024-09,Sparkling Water,Beverages,North,39,197.13
+2024-09,Sparkling Water,Beverages,South,37,178.15
+2024-09,Sparkling Water,Beverages,East,82,401.15
+2024-09,Sparkling Water,Beverages,West,120,575.95
+2024-09,Energy Drink Pack,Beverages,North,100,1919.19
+2024-09,Energy Drink Pack,Beverages,South,102,1883.85
+2024-09,Energy Drink Pack,Beverages,East,78,1473.89
+2024-09,Energy Drink Pack,Beverages,West,71,1396.85
+2024-09,Protein Bar Box,Snacks,North,120,2940.44
+2024-09,Protein Bar Box,Snacks,South,87,2197.97
+2024-09,Protein Bar Box,Snacks,East,98,2558.64
+2024-09,Protein Bar Box,Snacks,West,51,1237.66
+2024-09,Trail Mix Bag,Snacks,North,91,833.97
+2024-09,Trail Mix Bag,Snacks,South,48,436.16
+2024-09,Trail Mix Bag,Snacks,East,33,311.62
+2024-09,Trail Mix Bag,Snacks,West,85,789.81
+2024-09,Granola Clusters,Snacks,North,53,432.23
+2024-09,Granola Clusters,Snacks,South,94,747.61
+2024-09,Granola Clusters,Snacks,East,93,774.57
+2024-09,Granola Clusters,Snacks,West,102,825.17
+2024-09,Dark Chocolate,Snacks,North,91,521.26
+2024-09,Dark Chocolate,Snacks,South,70,386.01
+2024-09,Dark Chocolate,Snacks,East,89,508.57
+2024-09,Dark Chocolate,Snacks,West,105,551.74
+2024-09,Almond Butter,Pantry,North,47,644.88
+2024-09,Almond Butter,Pantry,South,98,1380.51
+2024-09,Almond Butter,Pantry,East,58,780.94
+2024-09,Almond Butter,Pantry,West,93,1327.06
+2024-09,Olive Oil 500ml,Pantry,North,115,1953.94
+2024-09,Olive Oil 500ml,Pantry,South,76,1237.06
+2024-09,Olive Oil 500ml,Pantry,East,36,607.48
+2024-09,Olive Oil 500ml,Pantry,West,61,1010.52
+2024-10,Cold Brew Coffee,Beverages,North,37,347.99
+2024-10,Cold Brew Coffee,Beverages,South,96,869.53
+2024-10,Cold Brew Coffee,Beverages,East,106,1000.55
+2024-10,Cold Brew Coffee,Beverages,West,83,728.97
+2024-10,Matcha Latte Mix,Beverages,North,33,422.73
+2024-10,Matcha Latte Mix,Beverages,South,67,849.51
+2024-10,Matcha Latte Mix,Beverages,East,103,1245.49
+2024-10,Matcha Latte Mix,Beverages,West,76,962.03
+2024-10,Sparkling Water,Beverages,North,69,330.24
+2024-10,Sparkling Water,Beverages,South,57,279.69
+2024-10,Sparkling Water,Beverages,East,83,428.99
+2024-10,Sparkling Water,Beverages,West,56,284.85
+2024-10,Energy Drink Pack,Beverages,North,53,1051.28
+2024-10,Energy Drink Pack,Beverages,South,95,1813.09
+2024-10,Energy Drink Pack,Beverages,East,66,1230.09
+2024-10,Energy Drink Pack,Beverages,West,55,1093.56
+2024-10,Protein Bar Box,Snacks,North,62,1551.64
+2024-10,Protein Bar Box,Snacks,South,109,2766.86
+2024-10,Protein Bar Box,Snacks,East,73,1808.44
+2024-10,Protein Bar Box,Snacks,West,45,1109.01
+2024-10,Trail Mix Bag,Snacks,North,90,864.81
+2024-10,Trail Mix Bag,Snacks,South,90,828.78
+2024-10,Trail Mix Bag,Snacks,East,73,722.4
+2024-10,Trail Mix Bag,Snacks,West,65,629.08
+2024-10,Granola Clusters,Snacks,North,39,326.35
+2024-10,Granola Clusters,Snacks,South,78,606.97
+2024-10,Granola Clusters,Snacks,East,42,337.29
+2024-10,Granola Clusters,Snacks,West,74,567.21
+2024-10,Dark Chocolate,Snacks,North,109,623.12
+2024-10,Dark Chocolate,Snacks,South,66,348.48
+2024-10,Dark Chocolate,Snacks,East,96,526.95
+2024-10,Dark Chocolate,Snacks,West,87,478.05
+2024-10,Almond Butter,Pantry,North,51,737.37
+2024-10,Almond Butter,Pantry,South,108,1472.2
+2024-10,Almond Butter,Pantry,East,74,1023.21
+2024-10,Almond Butter,Pantry,West,103,1442.16
+2024-10,Olive Oil 500ml,Pantry,North,100,1760.85
+2024-10,Olive Oil 500ml,Pantry,South,52,909.1
+2024-10,Olive Oil 500ml,Pantry,East,63,1116.85
+2024-10,Olive Oil 500ml,Pantry,West,70,1227.42
+2024-11,Cold Brew Coffee,Beverages,North,47,414.02
+2024-11,Cold Brew Coffee,Beverages,South,69,651.26
+2024-11,Cold Brew Coffee,Beverages,East,62,537.79
+2024-11,Cold Brew Coffee,Beverages,West,65,575.3
+2024-11,Matcha Latte Mix,Beverages,North,66,827.92
+2024-11,Matcha Latte Mix,Beverages,South,59,723.78
+2024-11,Matcha Latte Mix,Beverages,East,40,509.47
+2024-11,Matcha Latte Mix,Beverages,West,68,826.69
+2024-11,Sparkling Water,Beverages,North,82,390.51
+2024-11,Sparkling Water,Beverages,South,80,407.39
+2024-11,Sparkling Water,Beverages,East,85,419.32
+2024-11,Sparkling Water,Beverages,West,74,381.1
+2024-11,Energy Drink Pack,Beverages,North,97,1841.17
+2024-11,Energy Drink Pack,Beverages,South,29,550.84
+2024-11,Energy Drink Pack,Beverages,East,69,1358.75
+2024-11,Energy Drink Pack,Beverages,West,89,1680.02
+2024-11,Protein Bar Box,Snacks,North,64,1592.47
+2024-11,Protein Bar Box,Snacks,South,79,1956.44
+2024-11,Protein Bar Box,Snacks,East,74,1785.34
+2024-11,Protein Bar Box,Snacks,West,60,1569.75
+2024-11,Trail Mix Bag,Snacks,North,51,493.32
+2024-11,Trail Mix Bag,Snacks,South,73,717.14
+2024-11,Trail Mix Bag,Snacks,East,88,865.13
+2024-11,Trail Mix Bag,Snacks,West,54,503.06
+2024-11,Granola Clusters,Snacks,North,78,639.39
+2024-11,Granola Clusters,Snacks,South,89,678.11
+2024-11,Granola Clusters,Snacks,East,31,250.94
+2024-11,Granola Clusters,Snacks,West,93,780.03
+2024-11,Dark Chocolate,Snacks,North,80,436.3
+2024-11,Dark Chocolate,Snacks,South,34,189.16
+2024-11,Dark Chocolate,Snacks,East,89,485.86
+2024-11,Dark Chocolate,Snacks,West,76,434.07
+2024-11,Almond Butter,Pantry,North,30,432.13
+2024-11,Almond Butter,Pantry,South,48,663.12
+2024-11,Almond Butter,Pantry,East,37,519.24
+2024-11,Almond Butter,Pantry,West,67,964.75
+2024-11,Olive Oil 500ml,Pantry,North,39,634.71
+2024-11,Olive Oil 500ml,Pantry,South,89,1530.21
+2024-11,Olive Oil 500ml,Pantry,East,44,778.42
+2024-11,Olive Oil 500ml,Pantry,West,37,626.19
+2024-12,Cold Brew Coffee,Beverages,North,41,359.57
+2024-12,Cold Brew Coffee,Beverages,South,25,231.6
+2024-12,Cold Brew Coffee,Beverages,East,84,768.57
+2024-12,Cold Brew Coffee,Beverages,West,35,312.82
+2024-12,Matcha Latte Mix,Beverages,North,47,592.17
+2024-12,Matcha Latte Mix,Beverages,South,67,830.5
+2024-12,Matcha Latte Mix,Beverages,East,41,529.77
+2024-12,Matcha Latte Mix,Beverages,West,37,456.8
+2024-12,Sparkling Water,Beverages,North,56,272.1
+2024-12,Sparkling Water,Beverages,South,62,311.69
+2024-12,Sparkling Water,Beverages,East,90,439.9
+2024-12,Sparkling Water,Beverages,West,89,451.14
+2024-12,Energy Drink Pack,Beverages,North,42,802.84
+2024-12,Energy Drink Pack,Beverages,South,70,1361.82
+2024-12,Energy Drink Pack,Beverages,East,28,537.38
+2024-12,Energy Drink Pack,Beverages,West,57,1126.18
+2024-12,Protein Bar Box,Snacks,North,43,1106.68
+2024-12,Protein Bar Box,Snacks,South,64,1575.74
+2024-12,Protein Bar Box,Snacks,East,66,1669.28
+2024-12,Protein Bar Box,Snacks,West,69,1762.4
+2024-12,Trail Mix Bag,Snacks,North,68,667.15
+2024-12,Trail Mix Bag,Snacks,South,66,651.61
+2024-12,Trail Mix Bag,Snacks,East,67,623.68
+2024-12,Trail Mix Bag,Snacks,West,53,506.97
+2024-12,Granola Clusters,Snacks,North,73,559.36
+2024-12,Granola Clusters,Snacks,South,44,360.26
+2024-12,Granola Clusters,Snacks,East,36,277.06
+2024-12,Granola Clusters,Snacks,West,60,502.0
+2024-12,Dark Chocolate,Snacks,North,59,337.3
+2024-12,Dark Chocolate,Snacks,South,79,423.17
+2024-12,Dark Chocolate,Snacks,East,79,432.92
+2024-12,Dark Chocolate,Snacks,West,78,438.78
+2024-12,Almond Butter,Pantry,North,47,632.23
+2024-12,Almond Butter,Pantry,South,88,1186.89
+2024-12,Almond Butter,Pantry,East,88,1275.46
+2024-12,Almond Butter,Pantry,West,72,1055.62
+2024-12,Olive Oil 500ml,Pantry,North,88,1540.66
+2024-12,Olive Oil 500ml,Pantry,South,48,839.23
+2024-12,Olive Oil 500ml,Pantry,East,25,426.3
+2024-12,Olive Oil 500ml,Pantry,West,54,933.32

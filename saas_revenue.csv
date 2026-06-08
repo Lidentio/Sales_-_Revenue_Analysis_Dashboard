@@ -1,0 +1,289 @@
+period,sku,segment,zone,sold,total
+Jan 2024,Starter Plan,Subscriptions,Americas,16,473.63
+Jan 2024,Starter Plan,Subscriptions,EMEA,61,1746.19
+Jan 2024,Starter Plan,Subscriptions,APAC,55,1573.26
+Jan 2024,Pro Plan,Subscriptions,Americas,64,4949.02
+Jan 2024,Pro Plan,Subscriptions,EMEA,36,2920.18
+Jan 2024,Pro Plan,Subscriptions,APAC,23,1811.67
+Jan 2024,Enterprise Plan,Subscriptions,Americas,30,8715.25
+Jan 2024,Enterprise Plan,Subscriptions,EMEA,13,3887.47
+Jan 2024,Enterprise Plan,Subscriptions,APAC,24,7388.92
+Jan 2024,Data Analytics Add-on,Add-ons,Americas,32,1523.61
+Jan 2024,Data Analytics Add-on,Add-ons,EMEA,65,3249.82
+Jan 2024,Data Analytics Add-on,Add-ons,APAC,48,2393.12
+Jan 2024,API Access Pack,Add-ons,Americas,18,1759.21
+Jan 2024,API Access Pack,Add-ons,EMEA,59,5909.72
+Jan 2024,API Access Pack,Add-ons,APAC,18,1803.98
+Jan 2024,Priority Support,Services,Americas,36,5204.77
+Jan 2024,Priority Support,Services,EMEA,14,2055.45
+Jan 2024,Priority Support,Services,APAC,60,8966.18
+Jan 2024,Onboarding Bundle,Services,Americas,53,26491.07
+Jan 2024,Onboarding Bundle,Services,EMEA,16,7882.49
+Jan 2024,Onboarding Bundle,Services,APAC,28,13592.87
+Jan 2024,Training Credits,Education,Americas,35,7087.82
+Jan 2024,Training Credits,Education,EMEA,37,7191.08
+Jan 2024,Training Credits,Education,APAC,64,12809.92
+Feb 2024,Starter Plan,Subscriptions,Americas,11,319.29
+Feb 2024,Starter Plan,Subscriptions,EMEA,25,709.5
+Feb 2024,Starter Plan,Subscriptions,APAC,37,1080.39
+Feb 2024,Pro Plan,Subscriptions,Americas,25,1965.11
+Feb 2024,Pro Plan,Subscriptions,EMEA,52,4005.86
+Feb 2024,Pro Plan,Subscriptions,APAC,72,5540.46
+Feb 2024,Enterprise Plan,Subscriptions,Americas,44,13161.78
+Feb 2024,Enterprise Plan,Subscriptions,EMEA,73,21897.92
+Feb 2024,Enterprise Plan,Subscriptions,APAC,35,10446.25
+Feb 2024,Data Analytics Add-on,Add-ons,Americas,51,2571.13
+Feb 2024,Data Analytics Add-on,Add-ons,EMEA,26,1237.02
+Feb 2024,Data Analytics Add-on,Add-ons,APAC,60,2912.62
+Feb 2024,API Access Pack,Add-ons,Americas,57,5686.43
+Feb 2024,API Access Pack,Add-ons,EMEA,59,5923.42
+Feb 2024,API Access Pack,Add-ons,APAC,31,2985.09
+Feb 2024,Priority Support,Services,Americas,45,6831.12
+Feb 2024,Priority Support,Services,EMEA,21,3181.41
+Feb 2024,Priority Support,Services,APAC,40,6029.87
+Feb 2024,Onboarding Bundle,Services,Americas,50,25416.31
+Feb 2024,Onboarding Bundle,Services,EMEA,14,7101.77
+Feb 2024,Onboarding Bundle,Services,APAC,39,19219.81
+Feb 2024,Training Credits,Education,Americas,13,2540.35
+Feb 2024,Training Credits,Education,EMEA,13,2654.27
+Feb 2024,Training Credits,Education,APAC,43,8808.13
+Mar 2024,Starter Plan,Subscriptions,Americas,47,1342.83
+Mar 2024,Starter Plan,Subscriptions,EMEA,61,1736.21
+Mar 2024,Starter Plan,Subscriptions,APAC,35,1032.1
+Mar 2024,Pro Plan,Subscriptions,Americas,69,5396.03
+Mar 2024,Pro Plan,Subscriptions,EMEA,19,1489.11
+Mar 2024,Pro Plan,Subscriptions,APAC,70,5610.73
+Mar 2024,Enterprise Plan,Subscriptions,Americas,71,21084.61
+Mar 2024,Enterprise Plan,Subscriptions,EMEA,76,22718.82
+Mar 2024,Enterprise Plan,Subscriptions,APAC,44,13490.93
+Mar 2024,Data Analytics Add-on,Add-ons,Americas,46,2294.73
+Mar 2024,Data Analytics Add-on,Add-ons,EMEA,60,2865.72
+Mar 2024,Data Analytics Add-on,Add-ons,APAC,51,2547.33
+Mar 2024,API Access Pack,Add-ons,Americas,47,4603.09
+Mar 2024,API Access Pack,Add-ons,EMEA,16,1599.29
+Mar 2024,API Access Pack,Add-ons,APAC,31,3087.9
+Mar 2024,Priority Support,Services,Americas,39,5877.16
+Mar 2024,Priority Support,Services,EMEA,34,4926.89
+Mar 2024,Priority Support,Services,APAC,69,10190.05
+Mar 2024,Onboarding Bundle,Services,Americas,78,38395.51
+Mar 2024,Onboarding Bundle,Services,EMEA,77,39455.59
+Mar 2024,Onboarding Bundle,Services,APAC,16,8049.87
+Mar 2024,Training Credits,Education,Americas,35,7090.83
+Mar 2024,Training Credits,Education,EMEA,56,11446.75
+Mar 2024,Training Credits,Education,APAC,20,4005.69
+Apr 2024,Starter Plan,Subscriptions,Americas,67,1888.77
+Apr 2024,Starter Plan,Subscriptions,EMEA,16,471.75
+Apr 2024,Starter Plan,Subscriptions,APAC,37,1065.46
+Apr 2024,Pro Plan,Subscriptions,Americas,51,4054.41
+Apr 2024,Pro Plan,Subscriptions,EMEA,59,4786.52
+Apr 2024,Pro Plan,Subscriptions,APAC,38,3049.39
+Apr 2024,Enterprise Plan,Subscriptions,Americas,52,15575.48
+Apr 2024,Enterprise Plan,Subscriptions,EMEA,39,11765.64
+Apr 2024,Enterprise Plan,Subscriptions,APAC,29,8469.89
+Apr 2024,Data Analytics Add-on,Add-ons,Americas,63,3086.82
+Apr 2024,Data Analytics Add-on,Add-ons,EMEA,39,1918.07
+Apr 2024,Data Analytics Add-on,Add-ons,APAC,30,1448.86
+Apr 2024,API Access Pack,Add-ons,Americas,43,4383.78
+Apr 2024,API Access Pack,Add-ons,EMEA,32,3247.16
+Apr 2024,API Access Pack,Add-ons,APAC,46,4450.89
+Apr 2024,Priority Support,Services,Americas,72,10697.13
+Apr 2024,Priority Support,Services,EMEA,75,11138.2
+Apr 2024,Priority Support,Services,APAC,18,2711.28
+Apr 2024,Onboarding Bundle,Services,Americas,71,35045.49
+Apr 2024,Onboarding Bundle,Services,EMEA,36,17495.07
+Apr 2024,Onboarding Bundle,Services,APAC,50,25535.82
+Apr 2024,Training Credits,Education,Americas,72,14510.09
+Apr 2024,Training Credits,Education,EMEA,77,15449.6
+Apr 2024,Training Credits,Education,APAC,67,13340.0
+May 2024,Starter Plan,Subscriptions,Americas,21,598.07
+May 2024,Starter Plan,Subscriptions,EMEA,22,649.12
+May 2024,Starter Plan,Subscriptions,APAC,14,407.32
+May 2024,Pro Plan,Subscriptions,Americas,39,3137.13
+May 2024,Pro Plan,Subscriptions,EMEA,53,4215.12
+May 2024,Pro Plan,Subscriptions,APAC,18,1405.73
+May 2024,Enterprise Plan,Subscriptions,Americas,86,26051.68
+May 2024,Enterprise Plan,Subscriptions,EMEA,51,15495.27
+May 2024,Enterprise Plan,Subscriptions,APAC,73,21268.78
+May 2024,Data Analytics Add-on,Add-ons,Americas,84,4151.15
+May 2024,Data Analytics Add-on,Add-ons,EMEA,45,2228.83
+May 2024,Data Analytics Add-on,Add-ons,APAC,38,1904.23
+May 2024,API Access Pack,Add-ons,Americas,70,6988.13
+May 2024,API Access Pack,Add-ons,EMEA,25,2544.24
+May 2024,API Access Pack,Add-ons,APAC,44,4463.34
+May 2024,Priority Support,Services,Americas,16,2330.24
+May 2024,Priority Support,Services,EMEA,23,3358.05
+May 2024,Priority Support,Services,APAC,36,5431.37
+May 2024,Onboarding Bundle,Services,Americas,38,19463.63
+May 2024,Onboarding Bundle,Services,EMEA,78,39729.87
+May 2024,Onboarding Bundle,Services,APAC,31,15594.35
+May 2024,Training Credits,Education,Americas,53,10309.8
+May 2024,Training Credits,Education,EMEA,34,6779.59
+May 2024,Training Credits,Education,APAC,49,9557.13
+Jun 2024,Starter Plan,Subscriptions,Americas,86,2442.25
+Jun 2024,Starter Plan,Subscriptions,EMEA,64,1880.57
+Jun 2024,Starter Plan,Subscriptions,APAC,60,1775.76
+Jun 2024,Pro Plan,Subscriptions,Americas,56,4510.33
+Jun 2024,Pro Plan,Subscriptions,EMEA,15,1152.68
+Jun 2024,Pro Plan,Subscriptions,APAC,63,4999.93
+Jun 2024,Enterprise Plan,Subscriptions,Americas,63,19138.72
+Jun 2024,Enterprise Plan,Subscriptions,EMEA,45,13567.21
+Jun 2024,Enterprise Plan,Subscriptions,APAC,51,15365.35
+Jun 2024,Data Analytics Add-on,Add-ons,Americas,35,1761.99
+Jun 2024,Data Analytics Add-on,Add-ons,EMEA,50,2494.79
+Jun 2024,Data Analytics Add-on,Add-ons,APAC,66,3194.69
+Jun 2024,API Access Pack,Add-ons,Americas,18,1734.95
+Jun 2024,API Access Pack,Add-ons,EMEA,47,4648.6
+Jun 2024,API Access Pack,Add-ons,APAC,28,2789.74
+Jun 2024,Priority Support,Services,Americas,37,5585.23
+Jun 2024,Priority Support,Services,EMEA,70,10655.77
+Jun 2024,Priority Support,Services,APAC,89,12967.22
+Jun 2024,Onboarding Bundle,Services,Americas,41,20534.68
+Jun 2024,Onboarding Bundle,Services,EMEA,37,18425.86
+Jun 2024,Onboarding Bundle,Services,APAC,33,16217.94
+Jun 2024,Training Credits,Education,Americas,20,3929.9
+Jun 2024,Training Credits,Education,EMEA,42,8415.86
+Jun 2024,Training Credits,Education,APAC,32,6507.58
+Jul 2024,Starter Plan,Subscriptions,Americas,26,746.19
+Jul 2024,Starter Plan,Subscriptions,EMEA,60,1720.45
+Jul 2024,Starter Plan,Subscriptions,APAC,75,2174.77
+Jul 2024,Pro Plan,Subscriptions,Americas,55,4344.68
+Jul 2024,Pro Plan,Subscriptions,EMEA,38,2916.11
+Jul 2024,Pro Plan,Subscriptions,APAC,90,7112.32
+Jul 2024,Enterprise Plan,Subscriptions,Americas,92,27037.85
+Jul 2024,Enterprise Plan,Subscriptions,EMEA,42,12219.34
+Jul 2024,Enterprise Plan,Subscriptions,APAC,53,16210.54
+Jul 2024,Data Analytics Add-on,Add-ons,Americas,66,3228.29
+Jul 2024,Data Analytics Add-on,Add-ons,EMEA,57,2851.18
+Jul 2024,Data Analytics Add-on,Add-ons,APAC,48,2405.97
+Jul 2024,API Access Pack,Add-ons,Americas,72,7240.85
+Jul 2024,API Access Pack,Add-ons,EMEA,43,4231.61
+Jul 2024,API Access Pack,Add-ons,APAC,60,5831.18
+Jul 2024,Priority Support,Services,Americas,58,8420.87
+Jul 2024,Priority Support,Services,EMEA,54,8173.64
+Jul 2024,Priority Support,Services,APAC,36,5521.41
+Jul 2024,Onboarding Bundle,Services,Americas,69,33643.52
+Jul 2024,Onboarding Bundle,Services,EMEA,93,46111.58
+Jul 2024,Onboarding Bundle,Services,APAC,78,38546.21
+Jul 2024,Training Credits,Education,Americas,90,18183.99
+Jul 2024,Training Credits,Education,EMEA,29,5774.16
+Jul 2024,Training Credits,Education,APAC,54,10452.83
+Aug 2024,Starter Plan,Subscriptions,Americas,25,717.74
+Aug 2024,Starter Plan,Subscriptions,EMEA,54,1561.96
+Aug 2024,Starter Plan,Subscriptions,APAC,65,1886.75
+Aug 2024,Pro Plan,Subscriptions,Americas,42,3340.51
+Aug 2024,Pro Plan,Subscriptions,EMEA,28,2277.11
+Aug 2024,Pro Plan,Subscriptions,APAC,77,6009.72
+Aug 2024,Enterprise Plan,Subscriptions,Americas,42,12805.36
+Aug 2024,Enterprise Plan,Subscriptions,EMEA,59,17861.94
+Aug 2024,Enterprise Plan,Subscriptions,APAC,39,11881.92
+Aug 2024,Data Analytics Add-on,Add-ons,Americas,45,2227.99
+Aug 2024,Data Analytics Add-on,Add-ons,EMEA,97,4776.87
+Aug 2024,Data Analytics Add-on,Add-ons,APAC,82,4072.32
+Aug 2024,API Access Pack,Add-ons,Americas,72,6925.56
+Aug 2024,API Access Pack,Add-ons,EMEA,54,5495.82
+Aug 2024,API Access Pack,Add-ons,APAC,80,8051.23
+Aug 2024,Priority Support,Services,Americas,63,9511.7
+Aug 2024,Priority Support,Services,EMEA,63,9201.43
+Aug 2024,Priority Support,Services,APAC,67,10054.72
+Aug 2024,Onboarding Bundle,Services,Americas,85,41518.62
+Aug 2024,Onboarding Bundle,Services,EMEA,72,34918.22
+Aug 2024,Onboarding Bundle,Services,APAC,94,45808.11
+Aug 2024,Training Credits,Education,Americas,15,2951.63
+Aug 2024,Training Credits,Education,EMEA,27,5434.41
+Aug 2024,Training Credits,Education,APAC,49,9911.88
+Sep 2024,Starter Plan,Subscriptions,Americas,96,2846.28
+Sep 2024,Starter Plan,Subscriptions,EMEA,80,2259.07
+Sep 2024,Starter Plan,Subscriptions,APAC,27,769.25
+Sep 2024,Pro Plan,Subscriptions,Americas,43,3430.07
+Sep 2024,Pro Plan,Subscriptions,EMEA,61,4765.15
+Sep 2024,Pro Plan,Subscriptions,APAC,30,2428.6
+Sep 2024,Enterprise Plan,Subscriptions,Americas,45,13337.37
+Sep 2024,Enterprise Plan,Subscriptions,EMEA,83,25145.96
+Sep 2024,Enterprise Plan,Subscriptions,APAC,71,21475.23
+Sep 2024,Data Analytics Add-on,Add-ons,Americas,68,3270.48
+Sep 2024,Data Analytics Add-on,Add-ons,EMEA,36,1770.15
+Sep 2024,Data Analytics Add-on,Add-ons,APAC,34,1713.27
+Sep 2024,API Access Pack,Add-ons,Americas,41,4007.61
+Sep 2024,API Access Pack,Add-ons,EMEA,33,3307.18
+Sep 2024,API Access Pack,Add-ons,APAC,42,4120.28
+Sep 2024,Priority Support,Services,Americas,97,14709.17
+Sep 2024,Priority Support,Services,EMEA,39,5679.16
+Sep 2024,Priority Support,Services,APAC,74,10946.41
+Sep 2024,Onboarding Bundle,Services,Americas,101,51361.75
+Sep 2024,Onboarding Bundle,Services,EMEA,99,50303.9
+Sep 2024,Onboarding Bundle,Services,APAC,40,19705.67
+Sep 2024,Training Credits,Education,Americas,78,15378.92
+Sep 2024,Training Credits,Education,EMEA,54,10588.96
+Sep 2024,Training Credits,Education,APAC,57,11140.23
+Oct 2024,Starter Plan,Subscriptions,Americas,65,1933.98
+Oct 2024,Starter Plan,Subscriptions,EMEA,79,2241.14
+Oct 2024,Starter Plan,Subscriptions,APAC,72,2098.88
+Oct 2024,Pro Plan,Subscriptions,Americas,37,2952.79
+Oct 2024,Pro Plan,Subscriptions,EMEA,64,5097.85
+Oct 2024,Pro Plan,Subscriptions,APAC,20,1571.78
+Oct 2024,Enterprise Plan,Subscriptions,Americas,81,23638.54
+Oct 2024,Enterprise Plan,Subscriptions,EMEA,86,24950.57
+Oct 2024,Enterprise Plan,Subscriptions,APAC,66,20242.07
+Oct 2024,Data Analytics Add-on,Add-ons,Americas,52,2614.51
+Oct 2024,Data Analytics Add-on,Add-ons,EMEA,96,4697.64
+Oct 2024,Data Analytics Add-on,Add-ons,APAC,33,1662.01
+Oct 2024,API Access Pack,Add-ons,Americas,45,4494.0
+Oct 2024,API Access Pack,Add-ons,EMEA,99,9559.58
+Oct 2024,API Access Pack,Add-ons,APAC,68,6746.2
+Oct 2024,Priority Support,Services,Americas,82,12538.11
+Oct 2024,Priority Support,Services,EMEA,99,14463.41
+Oct 2024,Priority Support,Services,APAC,96,14025.75
+Oct 2024,Onboarding Bundle,Services,Americas,100,51388.53
+Oct 2024,Onboarding Bundle,Services,EMEA,52,25940.81
+Oct 2024,Onboarding Bundle,Services,APAC,101,51796.46
+Oct 2024,Training Credits,Education,Americas,100,20349.83
+Oct 2024,Training Credits,Education,EMEA,16,3196.98
+Oct 2024,Training Credits,Education,APAC,25,5119.17
+Nov 2024,Starter Plan,Subscriptions,Americas,43,1283.59
+Nov 2024,Starter Plan,Subscriptions,EMEA,68,1971.28
+Nov 2024,Starter Plan,Subscriptions,APAC,106,3138.75
+Nov 2024,Pro Plan,Subscriptions,Americas,60,4652.64
+Nov 2024,Pro Plan,Subscriptions,EMEA,26,2012.41
+Nov 2024,Pro Plan,Subscriptions,APAC,60,4670.97
+Nov 2024,Enterprise Plan,Subscriptions,Americas,33,10007.08
+Nov 2024,Enterprise Plan,Subscriptions,EMEA,91,27319.66
+Nov 2024,Enterprise Plan,Subscriptions,APAC,88,25799.7
+Nov 2024,Data Analytics Add-on,Add-ons,Americas,98,4916.4
+Nov 2024,Data Analytics Add-on,Add-ons,EMEA,95,4659.27
+Nov 2024,Data Analytics Add-on,Add-ons,APAC,24,1187.94
+Nov 2024,API Access Pack,Add-ons,Americas,33,3196.55
+Nov 2024,API Access Pack,Add-ons,EMEA,47,4582.66
+Nov 2024,API Access Pack,Add-ons,APAC,41,3994.59
+Nov 2024,Priority Support,Services,Americas,88,13469.2
+Nov 2024,Priority Support,Services,EMEA,44,6643.67
+Nov 2024,Priority Support,Services,APAC,17,2556.36
+Nov 2024,Onboarding Bundle,Services,Americas,82,39842.98
+Nov 2024,Onboarding Bundle,Services,EMEA,27,13316.83
+Nov 2024,Onboarding Bundle,Services,APAC,54,26950.07
+Nov 2024,Training Credits,Education,Americas,101,20344.48
+Nov 2024,Training Credits,Education,EMEA,45,8749.44
+Nov 2024,Training Credits,Education,APAC,103,20244.93
+Dec 2024,Starter Plan,Subscriptions,Americas,77,2195.37
+Dec 2024,Starter Plan,Subscriptions,EMEA,29,823.5
+Dec 2024,Starter Plan,Subscriptions,APAC,91,2655.74
+Dec 2024,Pro Plan,Subscriptions,Americas,58,4595.54
+Dec 2024,Pro Plan,Subscriptions,EMEA,63,4988.2
+Dec 2024,Pro Plan,Subscriptions,APAC,82,6368.55
+Dec 2024,Enterprise Plan,Subscriptions,Americas,41,12446.37
+Dec 2024,Enterprise Plan,Subscriptions,EMEA,103,30024.37
+Dec 2024,Enterprise Plan,Subscriptions,APAC,61,18461.99
+Dec 2024,Data Analytics Add-on,Add-ons,Americas,24,1180.53
+Dec 2024,Data Analytics Add-on,Add-ons,EMEA,22,1081.08
+Dec 2024,Data Analytics Add-on,Add-ons,APAC,66,3248.11
+Dec 2024,API Access Pack,Add-ons,Americas,31,3037.35
+Dec 2024,API Access Pack,Add-ons,EMEA,68,6576.99
+Dec 2024,API Access Pack,Add-ons,APAC,37,3681.27
+Dec 2024,Priority Support,Services,Americas,25,3727.32
+Dec 2024,Priority Support,Services,EMEA,97,14412.62
+Dec 2024,Priority Support,Services,APAC,67,9957.12
+Dec 2024,Onboarding Bundle,Services,Americas,22,10953.22
+Dec 2024,Onboarding Bundle,Services,EMEA,96,48545.76
+Dec 2024,Onboarding Bundle,Services,APAC,56,28474.58
+Dec 2024,Training Credits,Education,Americas,90,17994.15
+Dec 2024,Training Credits,Education,EMEA,21,4140.02
+Dec 2024,Training Credits,Education,APAC,22,4507.8

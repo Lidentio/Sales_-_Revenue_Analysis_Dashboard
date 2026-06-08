@@ -1,0 +1,201 @@
+month,item,type,territory,quantity,amount
+Q1-2024,Classic Hoodie,Tops,Northeast,120,6100.25
+Q1-2024,Classic Hoodie,Tops,Southeast,138,7506.1
+Q1-2024,Classic Hoodie,Tops,Midwest,53,2508.42
+Q1-2024,Classic Hoodie,Tops,West Coast,43,2314.76
+Q1-2024,Classic Hoodie,Tops,Southwest,107,5793.16
+Q1-2024,Slim Joggers,Bottoms,Northeast,66,2408.78
+Q1-2024,Slim Joggers,Bottoms,Southeast,138,5970.47
+Q1-2024,Slim Joggers,Bottoms,Midwest,76,2983.5
+Q1-2024,Slim Joggers,Bottoms,West Coast,56,2439.32
+Q1-2024,Slim Joggers,Bottoms,Southwest,76,3034.76
+Q1-2024,Graphic Tee,Tops,Northeast,51,1263.3
+Q1-2024,Graphic Tee,Tops,Southeast,56,1275.5
+Q1-2024,Graphic Tee,Tops,Midwest,120,2892.95
+Q1-2024,Graphic Tee,Tops,West Coast,153,3460.58
+Q1-2024,Graphic Tee,Tops,Southwest,129,2760.79
+Q1-2024,Cargo Shorts,Bottoms,Northeast,89,2864.37
+Q1-2024,Cargo Shorts,Bottoms,Southeast,98,3366.01
+Q1-2024,Cargo Shorts,Bottoms,Midwest,154,4884.87
+Q1-2024,Cargo Shorts,Bottoms,West Coast,84,2905.88
+Q1-2024,Cargo Shorts,Bottoms,Southwest,154,5771.53
+Q1-2024,Running Sneakers,Footwear,Northeast,51,4759.93
+Q1-2024,Running Sneakers,Footwear,Southeast,105,10351.97
+Q1-2024,Running Sneakers,Footwear,Midwest,83,7317.01
+Q1-2024,Running Sneakers,Footwear,West Coast,62,5157.76
+Q1-2024,Running Sneakers,Footwear,Southwest,141,12573.68
+Q1-2024,Ankle Socks 3pk,Accessories,Northeast,119,1834.36
+Q1-2024,Ankle Socks 3pk,Accessories,Southeast,111,1504.61
+Q1-2024,Ankle Socks 3pk,Accessories,Midwest,134,1905.64
+Q1-2024,Ankle Socks 3pk,Accessories,West Coast,55,835.1
+Q1-2024,Ankle Socks 3pk,Accessories,Southwest,48,757.68
+Q1-2024,Puffer Jacket,Outerwear,Northeast,64,7243.1
+Q1-2024,Puffer Jacket,Outerwear,Southeast,144,16686.11
+Q1-2024,Puffer Jacket,Outerwear,Midwest,57,7387.31
+Q1-2024,Puffer Jacket,Outerwear,West Coast,40,5143.64
+Q1-2024,Puffer Jacket,Outerwear,Southwest,57,6333.3
+Q1-2024,Baseball Cap,Accessories,Northeast,70,1635.42
+Q1-2024,Baseball Cap,Accessories,Southeast,119,2691.76
+Q1-2024,Baseball Cap,Accessories,Midwest,41,1084.01
+Q1-2024,Baseball Cap,Accessories,West Coast,68,1639.43
+Q1-2024,Baseball Cap,Accessories,Southwest,60,1365.17
+Q1-2024,Yoga Leggings,Bottoms,Northeast,129,5833.99
+Q1-2024,Yoga Leggings,Bottoms,Southeast,129,5776.14
+Q1-2024,Yoga Leggings,Bottoms,Midwest,133,5999.51
+Q1-2024,Yoga Leggings,Bottoms,West Coast,53,2386.3
+Q1-2024,Yoga Leggings,Bottoms,Southwest,153,6254.82
+Q1-2024,Sports Bra,Tops,Northeast,133,4281.42
+Q1-2024,Sports Bra,Tops,Southeast,102,3033.31
+Q1-2024,Sports Bra,Tops,Midwest,155,4240.15
+Q1-2024,Sports Bra,Tops,West Coast,97,2851.79
+Q1-2024,Sports Bra,Tops,Southwest,122,3651.66
+Q2-2024,Classic Hoodie,Tops,Northeast,149,6813.14
+Q2-2024,Classic Hoodie,Tops,Southeast,49,2502.57
+Q2-2024,Classic Hoodie,Tops,Midwest,47,2243.81
+Q2-2024,Classic Hoodie,Tops,West Coast,115,5804.45
+Q2-2024,Classic Hoodie,Tops,Southwest,79,4339.89
+Q2-2024,Slim Joggers,Bottoms,Northeast,103,4080.84
+Q2-2024,Slim Joggers,Bottoms,Southeast,112,4119.83
+Q2-2024,Slim Joggers,Bottoms,Midwest,124,5308.64
+Q2-2024,Slim Joggers,Bottoms,West Coast,118,4972.66
+Q2-2024,Slim Joggers,Bottoms,Southwest,126,4751.56
+Q2-2024,Graphic Tee,Tops,Northeast,94,2043.71
+Q2-2024,Graphic Tee,Tops,Southeast,80,1822.1
+Q2-2024,Graphic Tee,Tops,Midwest,89,1880.41
+Q2-2024,Graphic Tee,Tops,West Coast,91,2161.17
+Q2-2024,Graphic Tee,Tops,Southwest,84,1797.0
+Q2-2024,Cargo Shorts,Bottoms,Northeast,150,4794.12
+Q2-2024,Cargo Shorts,Bottoms,Southeast,139,4467.94
+Q2-2024,Cargo Shorts,Bottoms,Midwest,51,1869.72
+Q2-2024,Cargo Shorts,Bottoms,West Coast,137,4847.67
+Q2-2024,Cargo Shorts,Bottoms,Southwest,110,3896.31
+Q2-2024,Running Sneakers,Footwear,Northeast,79,6572.08
+Q2-2024,Running Sneakers,Footwear,Southeast,82,7623.2
+Q2-2024,Running Sneakers,Footwear,Midwest,130,12559.94
+Q2-2024,Running Sneakers,Footwear,West Coast,126,12400.95
+Q2-2024,Running Sneakers,Footwear,Southwest,112,9779.83
+Q2-2024,Ankle Socks 3pk,Accessories,Northeast,109,1540.04
+Q2-2024,Ankle Socks 3pk,Accessories,Southeast,118,1671.27
+Q2-2024,Ankle Socks 3pk,Accessories,Midwest,52,833.32
+Q2-2024,Ankle Socks 3pk,Accessories,West Coast,84,1325.29
+Q2-2024,Ankle Socks 3pk,Accessories,Southwest,108,1718.39
+Q2-2024,Puffer Jacket,Outerwear,Northeast,141,18524.32
+Q2-2024,Puffer Jacket,Outerwear,Southeast,138,16934.74
+Q2-2024,Puffer Jacket,Outerwear,Midwest,117,12708.66
+Q2-2024,Puffer Jacket,Outerwear,West Coast,151,19312.36
+Q2-2024,Puffer Jacket,Outerwear,Southwest,72,8087.08
+Q2-2024,Baseball Cap,Accessories,Northeast,124,2980.38
+Q2-2024,Baseball Cap,Accessories,Southeast,80,1801.72
+Q2-2024,Baseball Cap,Accessories,Midwest,144,3646.29
+Q2-2024,Baseball Cap,Accessories,West Coast,88,2041.61
+Q2-2024,Baseball Cap,Accessories,Southwest,115,2604.09
+Q2-2024,Yoga Leggings,Bottoms,Northeast,129,5473.05
+Q2-2024,Yoga Leggings,Bottoms,Southeast,90,3920.25
+Q2-2024,Yoga Leggings,Bottoms,Midwest,84,3946.65
+Q2-2024,Yoga Leggings,Bottoms,West Coast,133,6064.56
+Q2-2024,Yoga Leggings,Bottoms,Southwest,50,2048.22
+Q2-2024,Sports Bra,Tops,Northeast,58,1780.41
+Q2-2024,Sports Bra,Tops,Southeast,120,3434.77
+Q2-2024,Sports Bra,Tops,Midwest,119,3558.58
+Q2-2024,Sports Bra,Tops,West Coast,93,2662.54
+Q2-2024,Sports Bra,Tops,Southwest,130,3597.58
+Q3-2024,Classic Hoodie,Tops,Northeast,91,4351.88
+Q3-2024,Classic Hoodie,Tops,Southeast,121,6032.62
+Q3-2024,Classic Hoodie,Tops,Midwest,120,5453.41
+Q3-2024,Classic Hoodie,Tops,West Coast,87,4435.53
+Q3-2024,Classic Hoodie,Tops,Southwest,40,1920.18
+Q3-2024,Slim Joggers,Bottoms,Northeast,65,2410.76
+Q3-2024,Slim Joggers,Bottoms,Southeast,70,2703.07
+Q3-2024,Slim Joggers,Bottoms,Midwest,40,1678.62
+Q3-2024,Slim Joggers,Bottoms,West Coast,61,2380.95
+Q3-2024,Slim Joggers,Bottoms,Southwest,124,4959.02
+Q3-2024,Graphic Tee,Tops,Northeast,140,3415.71
+Q3-2024,Graphic Tee,Tops,Southeast,48,1183.36
+Q3-2024,Graphic Tee,Tops,Midwest,45,934.97
+Q3-2024,Graphic Tee,Tops,West Coast,150,3698.25
+Q3-2024,Graphic Tee,Tops,Southwest,109,2542.7
+Q3-2024,Cargo Shorts,Bottoms,Northeast,125,4301.75
+Q3-2024,Cargo Shorts,Bottoms,Southeast,53,1676.76
+Q3-2024,Cargo Shorts,Bottoms,Midwest,78,2893.69
+Q3-2024,Cargo Shorts,Bottoms,West Coast,114,4253.74
+Q3-2024,Cargo Shorts,Bottoms,Southwest,150,4816.16
+Q3-2024,Running Sneakers,Footwear,Northeast,141,12037.2
+Q3-2024,Running Sneakers,Footwear,Southeast,110,9946.34
+Q3-2024,Running Sneakers,Footwear,Midwest,87,7532.05
+Q3-2024,Running Sneakers,Footwear,West Coast,80,6958.85
+Q3-2024,Running Sneakers,Footwear,Southwest,60,5410.72
+Q3-2024,Ankle Socks 3pk,Accessories,Northeast,53,796.05
+Q3-2024,Ankle Socks 3pk,Accessories,Southeast,148,2151.69
+Q3-2024,Ankle Socks 3pk,Accessories,Midwest,127,2025.17
+Q3-2024,Ankle Socks 3pk,Accessories,West Coast,137,1945.31
+Q3-2024,Ankle Socks 3pk,Accessories,Southwest,57,802.7
+Q3-2024,Puffer Jacket,Outerwear,Northeast,112,14138.28
+Q3-2024,Puffer Jacket,Outerwear,Southeast,118,13244.57
+Q3-2024,Puffer Jacket,Outerwear,Midwest,132,15820.04
+Q3-2024,Puffer Jacket,Outerwear,West Coast,130,16409.45
+Q3-2024,Puffer Jacket,Outerwear,Southwest,93,12105.7
+Q3-2024,Baseball Cap,Accessories,Northeast,107,2746.29
+Q3-2024,Baseball Cap,Accessories,Southeast,114,3056.4
+Q3-2024,Baseball Cap,Accessories,Midwest,115,2673.23
+Q3-2024,Baseball Cap,Accessories,West Coast,48,1185.66
+Q3-2024,Baseball Cap,Accessories,Southwest,76,1813.65
+Q3-2024,Yoga Leggings,Bottoms,Northeast,46,2072.58
+Q3-2024,Yoga Leggings,Bottoms,Southeast,77,3430.91
+Q3-2024,Yoga Leggings,Bottoms,Midwest,46,2206.83
+Q3-2024,Yoga Leggings,Bottoms,West Coast,49,2365.11
+Q3-2024,Yoga Leggings,Bottoms,Southwest,142,6535.53
+Q3-2024,Sports Bra,Tops,Northeast,100,2976.63
+Q3-2024,Sports Bra,Tops,Southeast,106,3364.47
+Q3-2024,Sports Bra,Tops,Midwest,147,4364.21
+Q3-2024,Sports Bra,Tops,West Coast,137,4233.4
+Q3-2024,Sports Bra,Tops,Southwest,78,2327.82
+Q4-2024,Classic Hoodie,Tops,Northeast,78,3557.55
+Q4-2024,Classic Hoodie,Tops,Southeast,70,3778.63
+Q4-2024,Classic Hoodie,Tops,Midwest,109,5682.47
+Q4-2024,Classic Hoodie,Tops,West Coast,135,6306.69
+Q4-2024,Classic Hoodie,Tops,Southwest,94,4640.56
+Q4-2024,Slim Joggers,Bottoms,Northeast,125,5021.49
+Q4-2024,Slim Joggers,Bottoms,Southeast,79,3078.87
+Q4-2024,Slim Joggers,Bottoms,Midwest,99,3886.77
+Q4-2024,Slim Joggers,Bottoms,West Coast,108,4403.47
+Q4-2024,Slim Joggers,Bottoms,Southwest,181,7451.43
+Q4-2024,Graphic Tee,Tops,Northeast,64,1352.03
+Q4-2024,Graphic Tee,Tops,Southeast,163,3585.59
+Q4-2024,Graphic Tee,Tops,Midwest,171,4054.39
+Q4-2024,Graphic Tee,Tops,West Coast,200,4941.27
+Q4-2024,Graphic Tee,Tops,Southwest,108,2524.01
+Q4-2024,Cargo Shorts,Bottoms,Northeast,76,2579.37
+Q4-2024,Cargo Shorts,Bottoms,Southeast,210,7639.58
+Q4-2024,Cargo Shorts,Bottoms,Midwest,117,4171.65
+Q4-2024,Cargo Shorts,Bottoms,West Coast,205,6899.78
+Q4-2024,Cargo Shorts,Bottoms,Southwest,115,4258.57
+Q4-2024,Running Sneakers,Footwear,Northeast,185,17214.57
+Q4-2024,Running Sneakers,Footwear,Southeast,188,17726.04
+Q4-2024,Running Sneakers,Footwear,Midwest,165,14926.73
+Q4-2024,Running Sneakers,Footwear,West Coast,158,14000.61
+Q4-2024,Running Sneakers,Footwear,Southwest,112,9801.91
+Q4-2024,Ankle Socks 3pk,Accessories,Northeast,83,1173.05
+Q4-2024,Ankle Socks 3pk,Accessories,Southeast,207,3094.41
+Q4-2024,Ankle Socks 3pk,Accessories,Midwest,90,1251.31
+Q4-2024,Ankle Socks 3pk,Accessories,West Coast,66,1057.49
+Q4-2024,Ankle Socks 3pk,Accessories,Southwest,70,1106.15
+Q4-2024,Puffer Jacket,Outerwear,Northeast,189,24418.35
+Q4-2024,Puffer Jacket,Outerwear,Southeast,60,6964.36
+Q4-2024,Puffer Jacket,Outerwear,Midwest,178,19782.19
+Q4-2024,Puffer Jacket,Outerwear,West Coast,115,12866.73
+Q4-2024,Puffer Jacket,Outerwear,Southwest,188,23781.21
+Q4-2024,Baseball Cap,Accessories,Northeast,185,4313.9
+Q4-2024,Baseball Cap,Accessories,Southeast,124,3043.51
+Q4-2024,Baseball Cap,Accessories,Midwest,163,3859.54
+Q4-2024,Baseball Cap,Accessories,West Coast,125,2989.38
+Q4-2024,Baseball Cap,Accessories,Southwest,175,4328.58
+Q4-2024,Yoga Leggings,Bottoms,Northeast,140,6058.58
+Q4-2024,Yoga Leggings,Bottoms,Southeast,184,8226.86
+Q4-2024,Yoga Leggings,Bottoms,Midwest,189,8278.36
+Q4-2024,Yoga Leggings,Bottoms,West Coast,207,10215.24
+Q4-2024,Yoga Leggings,Bottoms,Southwest,128,5507.38
+Q4-2024,Sports Bra,Tops,Northeast,115,3467.79
+Q4-2024,Sports Bra,Tops,Southeast,210,6697.05
+Q4-2024,Sports Bra,Tops,Midwest,183,5091.26
+Q4-2024,Sports Bra,Tops,West Coast,94,2898.66
+Q4-2024,Sports Bra,Tops,Southwest,195,5911.84
